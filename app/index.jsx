@@ -27,7 +27,7 @@ const App = () => {
           <Image source={ico} style={{width:300,height:300}}></Image>
         </View>
         <View style={styles.buttonContainer}>
-          <TouchableOpacity style={styles.button} onPress={()=> router.push('/Home')}>
+          <TouchableOpacity style={styles.button} onPress={()=> router.push('/HomeScreen')}>
             <Text style={styles.buttonText}>Get Started</Text>
           </TouchableOpacity>
         </View>
