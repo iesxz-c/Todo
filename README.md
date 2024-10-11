@@ -55,11 +55,9 @@ To create a production build of the app:
 
    npx expo build
 
-API Link:
-https://web-production-4da0.up.railway.app
+API Link: https://web-production-4da0.up.railway.app
 
-🤖 Android app:
-https://expo.dev/artifacts/eas/urEfwV8gcg1bgjBLXWuCa9.aab
+🤖 Android app: https://expo.dev/artifacts/eas/urEfwV8gcg1bgjBLXWuCa9.aab
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
