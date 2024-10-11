@@ -20,3 +20,8 @@ export const updateTodo = async (id, todo) => {
 export const deleteTodo = async (id) => {
     await axios.delete(`${API_URL}/todo/${id}`);
 };
+
+export const fetchTodoById = async (id) => {
+    const response = await axios.get(`${API_URL}/todo/${id}`); // Adjust the URL as needed
+    return response.data;
+};

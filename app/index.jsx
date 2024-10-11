@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
     width: '60%', 
   },
   button: {
-    backgroundColor: '#007BFF', 
+    backgroundColor: 'orange', 
     height: 60,
     justifyContent: 'center',
     alignItems: 'center', 
