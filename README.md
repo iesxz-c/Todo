@@ -1,50 +1,66 @@
-# Welcome to your Expo app 👋
+# TodoApp
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+TodoApp is a mobile application built using React Native and Expo that allows users to create, edit, and manage their todo tasks. The app consumes a FastAPI backend deployed on Railway, providing a seamless and efficient way to handle tasks.
 
-## Get started
+## Features
 
-1. Install dependencies
+- Create new todos
+- Edit existing todos
+- Mark todos as completed
+- User-friendly interface with a responsive design
+- Offline support with local data storage
 
-   ```bash
-   npm install
-   ```
+## Tech Stack
 
-2. Start the app
+- **Frontend:** 
+  - React Native
+  - Expo
+- **Backend:**
+  - FastAPI
+  - SQLite (for local storage)
+- **Deployment:**
+  - Railway (for FastAPI)
+- **Icons:**
+  - Ionicons (for icons)
 
-   ```bash
-    npx expo start
-   ```
+## Installation
 
-In the output, you'll find options to open the app in a
+### Prerequisites
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+Make sure you have the following installed:
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+- Node.js (v14 or later)
+- Expo CLI
+- Java Development Kit (JDK) for Android builds
 
-## Get a fresh project
+### Install Dependencies
 
-When you're ready, run:
+npm install
 
-```bash
-npm run reset-project
-```
+## Usage
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### Run the App
 
-## Learn more
+You can start the development server using:
 
-To learn more about developing your project with Expo, look at the following resources:
+npx expo start
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+This will open Expo Developer Tools in your browser. You can run the app on a physical device, emulator, or simulator.
 
-## Join the community
+### Building the App
 
-Join our community of developers creating universal apps.
+To create a production build of the app:
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+1. Build the app using Expo's build service:
+
+   npx expo build
+
+API Link:
+https://web-production-4da0.up.railway.app
+
+🤖 Android app:
+https://expo.dev/artifacts/eas/urEfwV8gcg1bgjBLXWuCa9.aab
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
