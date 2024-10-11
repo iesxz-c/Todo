@@ -19,7 +19,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/ico.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.iesxz_c.Todo"
     },
     "web": {
       "bundler": "metro",
