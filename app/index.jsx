@@ -1,17 +1,31 @@
-import { View, Text, ImageBackground, TouchableOpacity,Image, StyleSheet } from 'react-native';
-import React from 'react';
+import { View, Text, ImageBackground, TouchableOpacity, Image, StyleSheet } from 'react-native';
+import React, { useEffect, useState } from 'react';
 import JOO from '@/assets/images/JOO.jpg';
-import ico from '@/assets/images/ico.png'
+import ico from '@/assets/images/ico.png';
 import { useRouter } from 'expo-router';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const App = () => {
   const router = useRouter();
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  useEffect(() => {
+    const checkLoginStatus = async () => {
+      const token = await AsyncStorage.getItem('accessToken');
+      setIsLoggedIn(!!token); // Set isLoggedIn to true if token exists
+    };
+
+    checkLoginStatus();
+  }, []);
 
   const handleGetStarted = () => {
     console.log('Get Started button pressed');
-   
+    if (isLoggedIn) {
+      router.push('/Profile'); // Navigate to Profile if logged in
+    } else {
+      router.push('/RegisterScreen'); // Navigate to RegisterScreen if not logged in
+    }
   };
-
 
   return (
     <View style={{ flex: 1 }}>
@@ -24,10 +38,10 @@ const App = () => {
           <Text style={styles.title}>
             Onsoul Todo
           </Text>
-          <Image source={ico} style={{width:300,height:300}}></Image>
+          <Image source={ico} style={{ width: 300, height: 300 }} />
         </View>
         <View style={styles.buttonContainer}>
-          <TouchableOpacity style={styles.button} onPress={()=> router.push('/HomeScreen')}>
+          <TouchableOpacity style={styles.button} onPress={handleGetStarted}>
             <Text style={styles.buttonText}>Get Started</Text>
           </TouchableOpacity>
         </View>
@@ -49,8 +63,8 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 25,
     color: 'white',
-    fontFamily:"monospace",
-    fontWeight:"bold",
+    fontFamily: "monospace",
+    fontWeight: "bold",
     textAlign: 'center',
   },
   buttonContainer: {
