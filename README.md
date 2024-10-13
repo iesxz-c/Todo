@@ -47,17 +47,6 @@ npx expo start
 
 This will open Expo Developer Tools in your browser. You can run the app on a physical device, emulator, or simulator.
 
-### Building the App
-
-To create a production build of the app:
-
-1. Build the app using Expo's build service:
-
-   npx expo build
-
-API Link: https://web-production-4da0.up.railway.app
-
-🤖 Android app: https://expo.dev/artifacts/eas/urEfwV8gcg1bgjBLXWuCa9.aab
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
