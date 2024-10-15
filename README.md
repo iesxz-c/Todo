@@ -17,7 +17,6 @@ TodoApp is a mobile application built using React Native and Expo that allows us
   - Expo
 - **Backend:**
   - FastAPI
-  - SQLite (for local storage)
 - **Deployment:**
   - Railway (for FastAPI)
 - **Icons:**
